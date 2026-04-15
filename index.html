@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Semantic Drift Boundary Observer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      line-height: 1.5;
+    }
+
+    textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    .box {
+      border: 1px solid #ccc;
+      padding: 16px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Semantic Drift Boundary Observer</h1>
+  <p>Compare two text outputs and estimate drift severity, divergence, and overlap.</p>
+
+  <label for="textA">Text A</label>
+  <textarea id="textA" rows="8" placeholder="Paste first text here"></textarea>
+
+  <label for="textB">Text B</label>
+  <textarea id="textB" rows="8" placeholder="Paste second text here"></textarea>
+
+  <button onclick="analyzeDrift()">Analyze Drift</button>
+
+  <div class="box">
+    <p><strong>Characters A:</strong> <span id="charsA">-</span></p>
+    <p><strong>Characters B:</strong> <span id="charsB">-</span></p>
+    <p><strong>Similarity Score:</strong> <span id="similarity">-</span></p>
+    <p><strong>Drift Score:</strong> <span id="drift">-</span></p>
+    <p><strong>Drift Severity:</strong> <span id="severity">-</span></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
